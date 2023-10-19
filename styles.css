@@ -1,0 +1,144 @@
+* {
+  border: 1px red solid;
+  cursor: url(./picasso_head_128px.png), url(./picasso_head.png),pointer;
+}
+
+
+
+.flex-container {
+  display: flex;
+  position: fixed;
+  flex-wrap: wrap;
+  background-color: rgb(18, 15, 226);
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: space-around;
+
+}
+
+
+ 
+
+
+.flexy{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: darkgreen;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+
+.triangle {
+
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 400px solid green;
+
+}
+
+.circle {
+  position:sticky;
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+  border-radius: 50%;
+  z-index: -2;
+  left: 5cm;
+}
+
+#email-list-form {
+  background-color: rgb(204, 0, 255);
+  flex-direction: row;
+  cursor:pointer;
+  align-items:last baseline;
+}
+
+@media screen and (max-width: 800px){
+  .flex-container{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+  }
+}
+
+@media screen and (max-width: 500px){
+  .flex-container{
+    background-image: unset;
+    background-color: black;
+    color: greenyellow;
+  }
+  * {
+    background-color: black !important;
+  }
+}
+/* #chevron {
+  position: relative;
+  text-align: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  height: 60px;
+  width: 200px;
+}
+#chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 51%;
+  background: red;
+  transform: skew(0deg, 6deg);
+}
+#chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: red;
+  transform: skew(0deg, -6deg);
+}
+
+
+#space-invader {
+  box-shadow: 0 0 0 1em red,
+  0 1em 0 1em red,
+  -2.5em 1.5em 0 .5em red,
+  2.5em 1.5em 0 .5em red,
+  -3em -3em 0 0 red,
+  3em -3em 0 0 red,
+  -2em -2em 0 0 red,
+  2em -2em 0 0 red,
+  -3em -1em 0 0 red,
+  -2em -1em 0 0 red,
+  2em -1em 0 0 red,
+  3em -1em 0 0 red,
+  -4em 0 0 0 red,
+  -3em 0 0 0 red,
+  3em 0 0 0 red,
+  4em 0 0 0 red,
+  -5em 1em 0 0 red,
+  -4em 1em 0 0 red,
+  4em 1em 0 0 red,
+  5em 1em 0 0 red,
+  -5em 2em 0 0 red,
+  5em 2em 0 0 red,
+  -5em 3em 0 0 red,
+  -3em 3em 0 0 red,
+  3em 3em 0 0 red,
+  5em 3em 0 0 red,
+  -2em 4em 0 0 red,
+  -1em 4em 0 0 red,
+  1em 4em 0 0 red,
+  2em 4em 0 0 red;
+  background: red;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  margin: 50px 0 70px 65px;
+} */
