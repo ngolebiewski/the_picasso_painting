@@ -1,5 +1,5 @@
 * {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   cursor: url(./picasso_head_128px.png), url(./picasso_head.png),pointer;
 }
 
@@ -9,31 +9,100 @@
   display: flex;
   position: fixed;
   flex-wrap: wrap;
-  background-color: rgb(18, 15, 226);
+  background-color: rgb(226, 225, 158);
   z-index: -10;
   height: 100%;
   width: 100%;
-  justify-content: space-around;
   flex-direction: row;
-  align-content: space-around;
+  justify-content: center;
+  align-content: center;
+}
 
+.squares {
+  display:flex;
+  flex-wrap: wrap;
+  width: 30%;
+}
+.goetheTriangle{
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 300px;
+  z-index: 3
+}
+.goetheTriangle>div{
+  display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.goetheUp{
+  display: flex;
+  width: 0;
+  height: 0;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid blue;
+  /* color to be from IDs */
+}
+
+.goetheDown{
+  width: 0;
+  height: 0;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid rgb(255, 0, 0);
+  /* color to be from IDs */
+}
+
+#gT1:nth-child(1) {
+  opacity: .9;
+}
+#gT1:nth-child(2) {
+  opacity: .6;
+}
+#gT1:nth-child(3) {
+  opacity: .3;
+}
+.top80 {
+  display: flex;
+  z-index: -9;
+  height: 80%;
+  width: 100%;
+  background-color: aqua;
+}
+
+.bottom20 {
+  display: flex;
+  z-index: -9;
+  height: 20%;
+  width: 100%;
+  justify-content: baseline;
+  background-color: darkmagenta;
 }
 
 
- 
-
-
 .flexy{
+  display: flex;
   position: relative;
   width: 80px;
   height: 80px;
   background-color: darkgreen;
   margin: 10px;
   flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
 
 .triangle {
-
+  display: flex;
   width: 0;
   height: 0;
   border-left: 100px solid transparent;
@@ -46,99 +115,53 @@
   position:sticky;
   height: 50px;
   width: 50px;
-  background-color: #555;
+  background-color: #ff0000;
   border-radius: 50%;
-  z-index: -2;
+  z-index: 5;
   left: 5cm;
 }
 
 #email-list-form {
-  background-color: rgb(204, 0, 255);
+  display: flex;
+  margin-inline-end: 100px 20px 0px 20px;
+  height: 6em;
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 60%),
+  linear-gradient(127deg, rgba(225, 255, 0, 0.8), rgba(0,255,0,0) 60%),
+  linear-gradient(239deg, rgba(0,0,255,.8), rgba(0,0,255,0) 60%);
   flex-direction: row;
   cursor:pointer;
-  align-items:last baseline;
+  align-items: center;
 }
 
 @media screen and (max-width: 800px){
   .flex-container{
+    display: flex;
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
   }
 }
 
 @media screen and (max-width: 500px){
   .flex-container{
+    display: flex;
     background-image: unset;
     background-color: black;
     color: greenyellow;
   }
+  .flexy {
+    width: 1em;
+    height: 1em;
+    color: black;
+    border: 1px rgba(225, 255, 0, 0.8) solid;
+    border-radius: 25%;
+  }
   * {
     background-color: black !important;
   }
-}
-/* #chevron {
-  position: relative;
-  text-align: center;
-  padding: 12px;
-  margin-bottom: 6px;
-  height: 60px;
-  width: 200px;
-}
-#chevron:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 51%;
-  background: red;
-  transform: skew(0deg, 6deg);
-}
-#chevron:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 50%;
-  background: red;
-  transform: skew(0deg, -6deg);
+  #email-list-form {
+    background: none;
 }
 
-
-#space-invader {
-  box-shadow: 0 0 0 1em red,
-  0 1em 0 1em red,
-  -2.5em 1.5em 0 .5em red,
-  2.5em 1.5em 0 .5em red,
-  -3em -3em 0 0 red,
-  3em -3em 0 0 red,
-  -2em -2em 0 0 red,
-  2em -2em 0 0 red,
-  -3em -1em 0 0 red,
-  -2em -1em 0 0 red,
-  2em -1em 0 0 red,
-  3em -1em 0 0 red,
-  -4em 0 0 0 red,
-  -3em 0 0 0 red,
-  3em 0 0 0 red,
-  4em 0 0 0 red,
-  -5em 1em 0 0 red,
-  -4em 1em 0 0 red,
-  4em 1em 0 0 red,
-  5em 1em 0 0 red,
-  -5em 2em 0 0 red,
-  5em 2em 0 0 red,
-  -5em 3em 0 0 red,
-  -3em 3em 0 0 red,
-  3em 3em 0 0 red,
-  5em 3em 0 0 red,
-  -2em 4em 0 0 red,
-  -1em 4em 0 0 red,
-  1em 4em 0 0 red,
-  2em 4em 0 0 red;
-  background: red;
-  width: 1em;
-  height: 1em;
-  overflow: hidden;
-  margin: 50px 0 70px 65px;
-} */
+#mailer {
+  display: flex;
+  align-self: baseline;
+}
