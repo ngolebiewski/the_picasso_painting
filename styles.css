@@ -3,7 +3,9 @@
   cursor: url(./picasso_head_128px.png), url(./picasso_head.png),pointer;
 }
 
-
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 .flex-container {
   display: flex;
@@ -99,6 +101,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  border-radius: 25%;
 }
 
 .triangle {
@@ -121,6 +124,18 @@
   left: 5cm;
 }
 
+form {
+  display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+}
+lable {
+  margin: .5em;
+}
+
 #email-list-form {
   display: flex;
   margin-inline-end: 100px 20px 0px 20px;
@@ -131,6 +146,20 @@
   flex-direction: row;
   cursor:pointer;
   align-items: center;
+  padding: 1cm;
+}
+
+input[type=submit] {
+  color: black;
+  font-size: medium;
+  padding: .5em;
+  background-color: rgb(196, 196, 196);
+  border: 3px groove gray;
+  margin: 5px;
+}
+
+input[type=submit]:hover {
+  background-color: lawngreen;
 }
 
 @media screen and (max-width: 800px){
@@ -152,16 +181,25 @@
     height: 1em;
     color: black;
     border: 1px rgba(225, 255, 0, 0.8) solid;
-    border-radius: 25%;
   }
   * {
     background-color: black !important;
+    color: greenyellow;
   }
+
   #email-list-form {
     background: none;
+  }
+  input[type=submit] {
+    color: black;
+    font-size: medium;
+    color: greenyellow;
+    border: 1px groove gray;
+  }
 }
 
 #mailer {
   display: flex;
   align-self: baseline;
 }
+
