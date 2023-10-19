@@ -1,5 +1,4 @@
 * {
-  /* border: 1px red solid; */
   cursor: url(./picasso_head_128px.png), url(./picasso_head.png),pointer;
 }
 
@@ -25,6 +24,7 @@ body {
   flex-wrap: wrap;
   width: 30%;
 }
+
 .goetheTriangle{
   display: flex;
   position: relative;
@@ -73,7 +73,7 @@ body {
 #gT1:nth-child(3) {
   opacity: .3;
 }
-.top80 {
+/* .top80 {
   display: flex;
   z-index: -9;
   height: 80%;
@@ -88,6 +88,11 @@ body {
   width: 100%;
   justify-content: baseline;
   background-color: darkmagenta;
+} */
+
+#z-2 {
+  z-index: -2;
+  right: 10cm;
 }
 
 
@@ -96,12 +101,18 @@ body {
   position: relative;
   width: 80px;
   height: 80px;
-  background-color: darkgreen;
+  background-color: rgb(41, 165, 41);
   margin: 10px;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   border-radius: 25%;
+  font-size: larger;
+  color: white;
+}
+
+.flexy:hover {
+  opacity: .5;
 }
 
 .triangle {
@@ -130,8 +141,9 @@ form {
     align-content: center;
     justify-content: space-between;
     align-items: stretch;
-    flex-direction: column;
+    flex-direction: row;
 }
+
 lable {
   margin: .5em;
 }
@@ -139,14 +151,15 @@ lable {
 #email-list-form {
   display: flex;
   margin-inline-end: 100px 20px 0px 20px;
-  height: 6em;
   background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 60%),
   linear-gradient(127deg, rgba(225, 255, 0, 0.8), rgba(0,255,0,0) 60%),
   linear-gradient(239deg, rgba(0,0,255,.8), rgba(0,0,255,0) 60%);
   flex-direction: row;
-  cursor:pointer;
+  cursor: pointer;
   align-items: center;
   padding: 1cm;
+  position: absolute;
+  bottom: 0;
 }
 
 input[type=submit] {
@@ -158,18 +171,21 @@ input[type=submit] {
   margin: 5px;
 }
 
+/* input[type=text]:active {
+}  */
+
 input[type=submit]:hover {
   background-color: lawngreen;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
   .flex-container{
     display: flex;
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
   .flex-container{
     display: flex;
     background-image: unset;
@@ -198,8 +214,5 @@ input[type=submit]:hover {
   }
 }
 
-#mailer {
-  display: flex;
-  align-self: baseline;
-}
+
 
